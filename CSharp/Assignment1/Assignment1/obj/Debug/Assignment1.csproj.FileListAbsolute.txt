@@ -1,0 +1,7 @@
+C:\savitha\Csharp Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.csproj.AssemblyReference.cache
+C:\savitha\Csharp Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache
+C:\savitha\Csharp Assignments\Assignment1\Assignment1\bin\Debug\Assignment1.exe.config
+C:\savitha\Csharp Assignments\Assignment1\Assignment1\bin\Debug\Assignment1.exe
+C:\savitha\Csharp Assignments\Assignment1\Assignment1\bin\Debug\Assignment1.pdb
+C:\savitha\Csharp Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.exe
+C:\savitha\Csharp Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.pdb

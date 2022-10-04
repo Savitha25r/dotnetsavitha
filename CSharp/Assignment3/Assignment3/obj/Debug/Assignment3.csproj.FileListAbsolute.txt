@@ -1,0 +1,14 @@
+C:\savitha\csharp\Assignment3\Assignment3\bin\Debug\Assignment3.exe.config
+C:\savitha\csharp\Assignment3\Assignment3\bin\Debug\Assignment3.exe
+C:\savitha\csharp\Assignment3\Assignment3\bin\Debug\Assignment3.pdb
+C:\savitha\csharp\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.AssemblyReference.cache
+C:\savitha\csharp\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.CoreCompileInputs.cache
+C:\savitha\csharp\Assignment3\Assignment3\obj\Debug\Assignment3.exe
+C:\savitha\csharp\Assignment3\Assignment3\obj\Debug\Assignment3.pdb
+C:\DotnetTraining\CSharp\Assignment3\Assignment3\bin\Debug\Assignment3.exe.config
+C:\DotnetTraining\CSharp\Assignment3\Assignment3\bin\Debug\Assignment3.exe
+C:\DotnetTraining\CSharp\Assignment3\Assignment3\bin\Debug\Assignment3.pdb
+C:\DotnetTraining\CSharp\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.AssemblyReference.cache
+C:\DotnetTraining\CSharp\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.CoreCompileInputs.cache
+C:\DotnetTraining\CSharp\Assignment3\Assignment3\obj\Debug\Assignment3.exe
+C:\DotnetTraining\CSharp\Assignment3\Assignment3\obj\Debug\Assignment3.pdb

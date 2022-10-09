@@ -1,0 +1,10 @@
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\bin\Debug\Assignment5.exe.config
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\bin\Debug\Assignment5.exe
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\bin\Debug\Assignment5.pdb
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.AssemblyReference.cache
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.CoreCompileInputs.cache
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\obj\Debug\Assignment5.exe
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\obj\Debug\Assignment5.pdb
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\bin\Debug\ClassLibrary1.dll
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\bin\Debug\ClassLibrary1.pdb
+C:\DotnetTraining\CSharp\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.CopyComplete

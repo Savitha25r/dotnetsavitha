@@ -11,7 +11,7 @@ namespace Assignment6
     {
         public static void Main()
         {
-            Console.WriteLine("-------- Display Stationery  Added Items-------");
+            Console.WriteLine("-------- Display Stationery  Added Items-------\n");
             program4Stationery st = new program4Stationery();
             st.Display();
             Console.ReadLine();
@@ -20,19 +20,6 @@ namespace Assignment6
         public void Display()
         {
          
-            /*List<int> intlistid = new List<int>();
-            Console.WriteLine("----------id number----------");//using int id number
-            intlistid.Add(39);
-            intlistid.Add(13);
-            intlistid.Add(3);
-            intlistid.Add(30);
-            intlistid.Add(1);
-            intlistid.Sort();
-            foreach (int n in intlistid)
-            {
-                Console.WriteLine(n);
-            }*/
-
             List<string> strlist = new List<string>();
            //using string adding statinory items
             strlist.Add("Pencil");
@@ -49,12 +36,25 @@ namespace Assignment6
 
             List<string> str = new List<string>();
             //using string adding statinory items
-            Console.WriteLine("---------sorted statinory items----------- ");
+            Console.WriteLine("---------sorted statinery items-----------\n");
             str.Add("Pencil");
-            str.Add("Pens");
+            str.Add("fevistick");
             str.Add("Eraser");
             str.Add("Sharpner");
             str.Add("Geometry box");
+
+            /*List<int> intlistid = new List<int>();
+           Console.WriteLine("----------id number----------");//using int id number
+           intlistid.Add(39);
+           intlistid.Add(13);
+           intlistid.Add(3);
+           intlistid.Add(30);
+           intlistid.Add(1);
+           intlistid.Sort();
+           foreach (int n in intlistid)
+           {
+               Console.WriteLine(n);
+           }*/
 
             //sorting them
             strlist.Sort();

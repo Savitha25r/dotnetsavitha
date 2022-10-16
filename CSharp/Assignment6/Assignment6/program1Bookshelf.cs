@@ -49,9 +49,9 @@ namespace Assignment6
             Console.WriteLine("-------------BookDetails-----------\n");
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine("Book Name: " + BookName[i] + "\t");
-                Console.WriteLine("Author Name: " + AuthorName[i] + "\n");
-                // Console.WriteLine(" The Book Name,AuthorName:" + BookName[i] + "\t" + AuthorName[i]);
+                 Console.WriteLine($"{BookName[i]},{AuthorName[i]}");
+                //Console.WriteLine("Book Name: " + BookName[i] + "\t");
+                //Console.WriteLine("Author Name: " + AuthorName[i] + "\n");
             }
         }
     }
@@ -60,9 +60,9 @@ namespace Assignment6
     // Using the indexer method assign values to the books and display the same.
     class BookShelf
     {
-        //books bs=new books();                                        //object store 5 books( bs)
+        // books bs=new books();                                        //object store 5 books( bs)
         books bs;
-
+        
         public static void SetIndexer(books bs)
         {
 
@@ -87,17 +87,14 @@ namespace Assignment6
         }
         public BookShelf()
         {
-
-
             SetIndexer(bs);           //composition has a relationship and class containing an object of another class
-
         }
 
         class program1Bookshelf
         {
             static void Main(string[] args)
             {
-                BookShelf i = new BookShelf();
+                BookShelf b = new BookShelf();
                 Console.Read();
             }
         }

@@ -11,7 +11,7 @@ namespace Assignment6
     {
         public static void Main()
         {
-            Console.WriteLine("--------Stationery Items-------");
+            Console.WriteLine("-------- Display Stationery  Added Items-------");
             program4Stationery st = new program4Stationery();
             st.Display();
             Console.ReadLine();

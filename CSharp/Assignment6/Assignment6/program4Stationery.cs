@@ -6,63 +6,97 @@ using System.Threading.Tasks;
 
 namespace Assignment6
 {
-    /*Create a simple Stationery application to add items and display added items using Generic List collections*/
+    /*Create a simple Stationery application to add items and display added items 
+     * using Generic List collections*/
+
+
+
+    // method:1 add Stationery things here and console it will display the Stationery things and sort it and give as o/p
     class program4Stationery
     {
         public static void Main()
         {
-            Console.WriteLine("-------- Display Stationery  Added Items-------\n");
+            Console.WriteLine("-------- Method1: Display Stationery Added Items-------\n");
             program4Stationery st = new program4Stationery();
             st.Display();
+
+            Console.WriteLine("---------Method2:Stationery Items--------");
+            Stationary sta = new Stationary();
+            string[] StationaryItem = new string[5];
+            sta.Getitems(StationaryItem);
             Console.ReadLine();
         }
 
         public void Display()
         {
          
-            List<string> strlist = new List<string>();
+            List<string> itemlist = new List<string>();
            //using string adding statinory items
-            strlist.Add("Pencil");
-            strlist.Add("Pens");
-            strlist.Add("Eraser");
-            strlist.Add("Sharpner");
-            strlist.Add("Geometry box");
+            itemlist.Add("Pencil");
+            itemlist.Add("Pens");
+            itemlist.Add("Eraser");
+            itemlist.Add("Sharpner");
+            itemlist.Add("Geometry box");
 
             
-            foreach (string s in strlist)
+            foreach (string i in itemlist)
             {
-                Console.WriteLine(s);
+                Console.WriteLine(i);
             }
 
-            List<string> str = new List<string>();
+            List<string> item = new List<string>();
             //using string adding statinory items
             Console.WriteLine("---------sorted statinery items-----------\n");
-            str.Add("Pencil");
-            str.Add("fevistick");
-            str.Add("Eraser");
-            str.Add("Sharpner");
-            str.Add("Geometry box");
+            item.Add("Pencil");
+            item.Add("Pens");
+            item.Add("Eraser");
+            item.Add("Sharpner");
+            item.Add("Geometry box");
 
-            /*List<int> intlistid = new List<int>();
-           Console.WriteLine("----------id number----------");//using int id number
-           intlistid.Add(39);
-           intlistid.Add(13);
-           intlistid.Add(3);
-           intlistid.Add(30);
-           intlistid.Add(1);
-           intlistid.Sort();
-           foreach (int n in intlistid)
-           {
-               Console.WriteLine(n);
-           }*/
-
+            
             //sorting them
-            strlist.Sort();
-            foreach (string s in strlist)
+            itemlist.Sort();
+            foreach (string s in itemlist)
             {
                 Console.WriteLine(s);
             }
 
         }
+
+        // method2: like user will take the input Stationary items from user and add stationary things and display
+
+        class Stationary
+        {
+
+            public void Getitems(string[] StationaryItem)
+            {
+
+                for (int i = 0; i < StationaryItem.Length; i++)
+                {
+                    Console.WriteLine("Enter the Stationary item {0}: ", i + 1);      //enter the items from user what they need
+                    StationaryItem[i] = Console.ReadLine();
+                }
+                List<string> item = new List<string>();
+                for (int i = 0; i < StationaryItem.Length; i++)
+                {
+                    item.Add(StationaryItem[i]);
+                }
+
+
+                void Displayitem()                         //added items will display from the user
+                {
+                    int inc = 1;
+                    foreach (var things in item)
+                    {
+                        Console.WriteLine("Added Stationary Item is{0}: {1}\t ", inc, things);
+                        inc++;
+                    }
+
+                }
+                Displayitem();
+            }
+
+        }
+
     }
 }

@@ -1,0 +1,7 @@
+C:\DotnetTraining\CSharp\code test\code test\obj\Debug\code test.csproj.CoreCompileInputs.cache
+C:\DotnetTraining\CSharp\code test\code test\bin\Debug\code test.exe.config
+C:\DotnetTraining\CSharp\code test\code test\bin\Debug\code test.exe
+C:\DotnetTraining\CSharp\code test\code test\bin\Debug\code test.pdb
+C:\DotnetTraining\CSharp\code test\code test\obj\Debug\code test.csproj.AssemblyReference.cache
+C:\DotnetTraining\CSharp\code test\code test\obj\Debug\code test.exe
+C:\DotnetTraining\CSharp\code test\code test\obj\Debug\code test.pdb

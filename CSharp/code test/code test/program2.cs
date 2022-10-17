@@ -15,11 +15,11 @@ namespace code_test
 
         public int length { get; set; }
         public int breadth { get; set; }
-        public static Box operator +(Box rect1, Box rect2)
+        public static Box operator +(Box obj1, Box obj2)
         {
             Box obj = new Box();
-            obj.length = rect1.length + rect2.length;
-            obj.breadth = rect1.breadth + rect2.breadth;
+            obj.length = obj1.length + obj2.length;
+            obj.breadth = obj1.breadth + obj2.breadth;
             return obj;
         }
 

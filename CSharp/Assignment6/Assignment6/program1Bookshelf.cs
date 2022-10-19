@@ -42,12 +42,14 @@ namespace Assignment6
         }
     }
 
-
+    //Create an Indexer of Books Object to store 5 books in a class called BookShelf. 
+    //Using the indexer method assign values to the books and display the same.
 
     class BookShelf
     {
         books[] b = new books[5];                //b obj
-       
+
+        //declare indexers to handle the index of book name field
         public books this[int bname]                   //bname=book name
         {
             get { return b[bname]; }
@@ -61,7 +63,6 @@ namespace Assignment6
             set { b[aname] = value; }
         }
 
-        //write a method Display() to display the details.
 
         static void Main()
         {

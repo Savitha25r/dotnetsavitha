@@ -23,87 +23,67 @@ namespace Assignment6
       */
     class books
     {
-        private string[] BookName = new string[5];
-        private string[] AuthorName = new string[5];
 
+        string BookName;
+        string AuthorName;
+        //private string[] BookName = new string[5];
+        //private string[] AuthorName = new string[5];
 
-        //declare indexers to handle the index of book name field
-        public string this[int bname]                   //bname=book name
+        public books(string BookName, string AuthorName)
         {
-            get { return BookName[bname]; }
-            set { BookName[bname] = value; }
+            this.BookName = BookName;
+            this.AuthorName = AuthorName;
+        }
+
+        public void Display()
+        {
+            Console.WriteLine("the Book {0} was written by {1} \n", BookName, AuthorName);
+            
+        }
+    }
+
+
+
+    class BookShelf
+    {
+        books[] b = new books[5];                //b obj
+       
+        public books this[int bname]                   //bname=book name
+        {
+            get { return b[bname]; }
+            set { b[bname] = value; }
         }
 
         //declare indexers to handle the index of author name field
-        public string this[long aname]                    //aname=authorname
+        public books this[long aname]                    //aname=authorname
         {
-            get { return AuthorName[aname]; }
-            set { AuthorName[aname] = value; }
+            get { return b[aname]; }
+            set { b[aname] = value; }
         }
 
         //write a method Display() to display the details.
 
-
-        public void Display()
+        static void Main()
         {
-            Console.WriteLine("-------------BookDetails-----------\n");
-            for (int i = 0; i < 5; i++)
-            {
-                 Console.WriteLine($"{BookName[i]},{AuthorName[i]}");
-                //Console.WriteLine("Book Name: " + BookName[i] + "\t");
-                //Console.WriteLine("Author Name: " + AuthorName[i] + "\n");
-            }
+            BookShelf bs = new BookShelf();
+
+            Console.WriteLine("------------Book Details-----------\n");
+
+            bs[0] = new books( "Hamlet", "William Shakespeare");                 // 5book name and author name
+            bs[1] = new books("And There Was None", "Agatha Christie");
+            bs[2] = new books("A Christmas Carol", "Charles Dickens");
+            bs[3] = new books("Harry Potter And The Deathly Hallows", "J.K Rowling");
+            bs[4] = new books("The Tyger", "William Blake");
+
+               for (int i = 0; i < 5; i++)
+
+               {
+                    bs[i].Display();
+               }
+
+            
+            Console.Read();
         }
     }
-
-    //Create an Indexer of Books Object to store 5 books in a class called BookShelf. 
-    // Using the indexer method assign values to the books and display the same.
-    class BookShelf
-    {
-        // books bs=new books();                                        //object store 5 books( bs)
-        books bs;
-        
-        public static void SetIndexer(books bs)
-        {
-
-            bs = new books();
-            //Console.WriteLine("--------Book Name----------");
-            //calling indexers to assign values for book name
-            bs[0] = "Hamlet";            // 5book name
-            bs[1] = "And There Was None";
-            bs[2] = "A Christmas Carol";
-            bs[3] = "Harry Potter And The Deathly Hallows";
-            bs[4] = "The Tyger";
-
-            //Console.WriteLine("--------Author Name----------");
-            //calling indexers to assign values for author name
-            bs[0L] = "William Shakespeare";           //5  author name             
-            bs[1L] = "Agatha Christie";
-            bs[2L] = "Charles Dickens";
-            bs[3L] = "J.K Rowling";
-            bs[4L] = "William Blake";
-            bs.Display();
-
-        }
-        public BookShelf()
-        {
-            SetIndexer(bs);           //composition has a relationship and class containing an object of another class
-        }
-
-        class program1Bookshelf
-        {
-            static void Main(string[] args)
-            {
-                BookShelf b = new BookShelf();
-                Console.Read();
-            }
-        }
-
-    }
-
 }
-
-
-
-
 

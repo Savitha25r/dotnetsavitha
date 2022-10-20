@@ -47,21 +47,20 @@ namespace Assignment6
 
     class BookShelf
     {
-        books[] b = new books[5];                //b obj
+        books[] b = new books[5];                //b obj composition has a relationship
 
         //declare indexers to handle the index of book name field
-        public books this[int bname]                   //bname=book name
+        
+        public books this[int book ]                   //book=book name
         {
-            get { return b[bname]; }
-            set { b[bname] = value; }
+            get { return b[(int)book]; }
+            set { b[(int)book] = value; }
         }
-
-        //declare indexers to handle the index of author name field
-        public books this[long aname]                    //aname=authorname
-        {
-            get { return b[aname]; }
-            set { b[aname] = value; }
-        }
+        //public books this[ author]                   //book=book name
+        //{
+        //    get { return b[(int)author]; }
+        //    set { b[(int)author] = value; }
+        //}
 
 
         static void Main()
@@ -79,7 +78,7 @@ namespace Assignment6
                for (int i = 0; i < 5; i++)
 
                {
-                    bs[i].Display();
+                bs[i].Display();               
                }
 
             

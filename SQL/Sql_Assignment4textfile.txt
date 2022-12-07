@@ -1,0 +1,178 @@
+create database Sql_Assignment4
+use Sql_Assignment4
+
+-----------------assignment4------------------
+
+-- 1.Write a T-SQL Program to find the factorial of a given number.
+--to find factorial of 5 and value 5*4*3*2*1=120
+
+declare @number int=5;   
+declare @fact int=1;
+
+while(@number > 1)
+begin
+set @fact = @fact * @number;
+set @number = @number - 1;
+end
+
+select @fact as 'Factorial is '
+
+--2.	Create a stored procedure to generate multiplication tables up to a given number.
+--create or alter procedure multiply(@num1 int,@num2 int)
+--as
+--begin
+--declare @multi int 
+--set @multi= @num1*@num2
+--print @multi
+--end
+
+--exec multiply 5,5
+
+--create or alter procedure multiplication
+--@num int =5,@i int 
+--for(i=1;i<=10;i++) 
+--as
+--begin
+
+Create or alter Procedure MultiplicationTable
+@n int
+AS
+Begin
+Set nocount on;
+
+Declare @i int = @n, @j int = 1
+Declare @tb TABLE (RESULT VARCHAR(50))
+
+WHILE (@j <= 10)
+Begin
+Insert into  @tb
+Select CAST(@i AS VARCHAR) + CHAR(32) + '*' + CHAR(32) +
+CAST(@j AS VARCHAR) + CHAR(32) + '=' + CHAR(32) + 
+CAST(@i * @j AS VARCHAR)
+
+SET @j = @j + 1
+end
+Select * from @tb;
+
+end
+
+exec MultiplicationTable 5
+
+
+---------------------multiplication table with at at time till 1 to 11 it will display-------------------
+DECLARE @multiplicationtable varchar(5000)
+       ,@StartNumber int
+SET @StartNumber=2
+SET @multiplicationtable='
+DECLARE @StartNumber int
+       ,@EndNumber   int
+SELECT @StartNumber='+CONVERT(varchar(3),@StartNumber)+'
+      ,@EndNumber=@StartNumber+9;WITH AllNumbers AS
+(
+    SELECT @StartNumber AS [ ]
+        , @StartNumber*(@StartNumber+0) AS ['+CONVERT(varchar(3),@StartNumber+0)+']
+        , @StartNumber*(@StartNumber+1) AS ['+CONVERT(varchar(3),@StartNumber+1)+']
+        , @StartNumber*(@StartNumber+2) AS ['+CONVERT(varchar(3),@StartNumber+2)+']
+        , @StartNumber*(@StartNumber+3) AS ['+CONVERT(varchar(3),@StartNumber+3)+']
+        , @StartNumber*(@StartNumber+4) AS ['+CONVERT(varchar(3),@StartNumber+4)+']
+        , @StartNumber*(@StartNumber+5) AS ['+CONVERT(varchar(3),@StartNumber+5)+']
+        , @StartNumber*(@StartNumber+6) AS ['+CONVERT(varchar(3),@StartNumber+6)+']
+        , @StartNumber*(@StartNumber+7) AS ['+CONVERT(varchar(3),@StartNumber+7)+']
+        , @StartNumber*(@StartNumber+8) AS ['+CONVERT(varchar(3),@StartNumber+8)+']
+        , @StartNumber*(@StartNumber+9) AS ['+CONVERT(varchar(3),@StartNumber+9)+']
+    UNION ALL
+    SELECT [ ]+1
+        , ([ ]+1)*(@StartNumber+0) AS ['+CONVERT(varchar(3),@StartNumber+0)+']
+        , ([ ]+1)*(@StartNumber+1) AS ['+CONVERT(varchar(3),@StartNumber+1)+']
+        , ([ ]+1)*(@StartNumber+2) AS ['+CONVERT(varchar(3),@StartNumber+2)+']
+        , ([ ]+1)*(@StartNumber+3) AS ['+CONVERT(varchar(3),@StartNumber+3)+']
+        , ([ ]+1)*(@StartNumber+4) AS ['+CONVERT(varchar(3),@StartNumber+4)+']
+        , ([ ]+1)*(@StartNumber+5) AS ['+CONVERT(varchar(3),@StartNumber+5)+']
+        , ([ ]+1)*(@StartNumber+6) AS ['+CONVERT(varchar(3),@StartNumber+6)+']
+        , ([ ]+1)*(@StartNumber+7) AS ['+CONVERT(varchar(3),@StartNumber+7)+']
+        , ([ ]+1)*(@StartNumber+8) AS ['+CONVERT(varchar(3),@StartNumber+8)+']
+        , ([ ]+1)*(@StartNumber+9) AS ['+CONVERT(varchar(3),@StartNumber+9)+']
+
+        FROM AllNumbers
+        WHERE [ ]<@EndNumber
+)
+SELECT * FROM AllNumbers a'
+
+exec(@multiplicationtable)
+
+
+
+
+---------------multiplication table for 8------------------
+
+DECLARE @i INT
+SET @i = 0;
+
+-- Alternate syntax to club above two lines
+DECLARE @j INT
+SET @j= 8; -- Multiplicaiton table for 8. Change this.
+
+PRINT 'Multipliction table for '
++ CONVERT(VARCHAR, @j) + ':' + CHAR(13); -- newline
+
+
+WHILE (@i < 10) -- show 1 to 10
+BEGIN
+SET @i = @i + 1; -- Can be written as SET @i += 1;
+PRINT CONVERT(VARCHAR, @i) + ' x 8 = ' + CONVERT(VARCHAR, @i*@j);
+END
+
+
+
+
+
+--3.  Create a trigger to restrict data manipulation on EMP table during General holidays. Display the error message 
+--like “Due to Independence day you cannot manipulate data” or "Due To Diwali", you cannot manupulate" etc
+----Note: Create holiday table as (holiday_date,Holiday_name) store at least 4 holiday details
+--create  table Holiday(Holiday_name varchar(30),Holiday_date date)
+
+--drop table holiday
+
+--insert into Holiday Values('Diwali','24-oct-2022'),('new year','01-jan-23')
+--insert into Holiday values('Christmas','25-dec-22'),('Rajyostsva','01-nov-22')
+
+--select * from holiday
+
+--create or alter trigger instead_of_trigger_holiday
+--on holiday
+--instead of insert
+--as
+--begin
+
+--select 'Due to Diwali day you cannot manipulate data...........' as 'error message'
+--end
+
+
+--select * from holiday
+--begin
+--select holiday_name,Holiday_date from holiday 
+--end
+
+create or alter trigger tr1_Holiday
+on Holiday
+instead of insert
+as
+begin
+declare @date date
+declare @name varchar(30)
+select * from inserted
+select @date= holiday_date , @name =holiday_name from Holiday   
+where @date ='24-oct-2022' and @name = 'Diwali'
+begin
+Raiserror('dut to Diwali we cannot manipute the data',16,1) 
+return
+end
+end
+
+
+
+insert into Holiday values('Independence day','24-oct-2022')
+select *from Holiday
+
+
+

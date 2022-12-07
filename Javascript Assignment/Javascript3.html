@@ -1,0 +1,32 @@
+<!---3. Write a javascript to get the extension of a filename given by the user
+     (hint: use split and pop()) -->
+     <!DOCTYPE html>
+ <html>
+    <head>
+    <meta charset="utf-8">
+    <title>program3 Write a javascript to get the extension of a filename given by the user</title>
+        <script>
+            function getFileExtension(filename){
+            const extension=filename.split('.').pop();
+            return extension;        
+            }
+
+            //passing the filename txt anf js
+            //console displaying
+            
+            //using document.write to display
+         document.write(getFileExtension('savi.js'));
+         document.write("<br>");
+         document.write(getFileExtension('training.html'));
+         document.write("<br>");
+         document.write(getFileExtension('course.css'));
+         document.write("<br>");
+         document.write(getFileExtension('student.txt'));
+          
+            
+        </script>
+    </head>
+    <body>
+
+    </body>
+    </html>

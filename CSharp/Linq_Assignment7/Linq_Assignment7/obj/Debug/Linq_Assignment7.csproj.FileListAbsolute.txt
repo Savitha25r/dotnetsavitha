@@ -1,0 +1,7 @@
+C:\DotnetTraining\CSharp\Linq_Assignment7\Linq_Assignment7\bin\Debug\Linq_Assignment7.exe.config
+C:\DotnetTraining\CSharp\Linq_Assignment7\Linq_Assignment7\bin\Debug\Linq_Assignment7.exe
+C:\DotnetTraining\CSharp\Linq_Assignment7\Linq_Assignment7\bin\Debug\Linq_Assignment7.pdb
+C:\DotnetTraining\CSharp\Linq_Assignment7\Linq_Assignment7\obj\Debug\Linq_Assignment7.csproj.AssemblyReference.cache
+C:\DotnetTraining\CSharp\Linq_Assignment7\Linq_Assignment7\obj\Debug\Linq_Assignment7.csproj.CoreCompileInputs.cache
+C:\DotnetTraining\CSharp\Linq_Assignment7\Linq_Assignment7\obj\Debug\Linq_Assignment7.exe
+C:\DotnetTraining\CSharp\Linq_Assignment7\Linq_Assignment7\obj\Debug\Linq_Assignment7.pdb

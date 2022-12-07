@@ -33,6 +33,8 @@ namespace code_test
                 r1.length = 51; r1.breadth = 41;
                 r2.length = 98; r2.breadth = 50;
                 Box thirdr3 = r1 + r2;
+                Console.WriteLine("The Total Length and Breadth is {0} {1}", thirdr3.length, thirdr3.breadth);
+                
                 Console.ReadLine();
             }
         }
